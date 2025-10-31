@@ -1,0 +1,159 @@
+# mkdocs.yml - REST API Guide
+site_name: EPMware REST API Guide
+site_description: Complete reference guide for EPMware REST API integration and automation
+site_author: EPMware, Inc.
+site_url: https://rest-api-guide.epmware.com
+
+validation:
+  nav:
+    omitted_files: info
+    not_found: warn
+    absolute_links: info
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+  features:
+  - navigation.top
+  - navigation.indexes
+  - search.highlight
+  - search.share
+  - search.suggest
+  - content.code.copy
+  - content.tooltips
+  - navigation.footer
+  - toc.follow
+  - toc.integrate
+  
+  logo: assets/images/epmware-logo.png
+  favicon: assets/images/favicon.ico
+
+extra_css:
+  - assets/css/custom.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search:
+      lang: en
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+
+# Navigation structure
+nav:
+  - Documentation Center: https://docs.epmware.com
+  
+  - REST API Home:
+    - index.md
+  
+  - Getting Started:
+    - getting-started/index.md
+    - Authentication: getting-started/authentication.md
+    - URL Structure: getting-started/url-structure.md
+    - Response Formats: getting-started/response-formats.md
+    - Error Handling: getting-started/error-handling.md
+  
+  - API Modules:
+    - modules/index.md
+    - Task Module:
+      - modules/task/index.md
+      - Get Task Status: modules/task/get-status.md
+      - Get Log File: modules/task/get-log-file.md
+    - ERP Module:
+      - modules/erp/index.md
+      - Upload File: modules/erp/upload-file.md
+      - Run Import: modules/erp/run-import.md
+    - Deployment Module:
+      - modules/deployment/index.md
+      - Run Deployment: modules/deployment/run-deployment.md
+      - Get Execution Details: modules/deployment/get-execution-details.md
+    - Export Module:
+      - modules/export/index.md
+      - Run Export: modules/export/run-export.md
+      - Download File: modules/export/download-file.md
+      - Get Execution Details: modules/export/get-execution-details.md
+    - Security Module:
+      - modules/security/index.md
+      - User Management:
+        - modules/security/users/create.md
+        - modules/security/users/update.md
+        - modules/security/users/enable-disable.md
+        - modules/security/users/get-users.md
+      - Group Management:
+        - modules/security/groups/assign-groups.md
+        - modules/security/groups/unassign-groups.md
+        - modules/security/groups/get-groups.md
+        - modules/security/groups/get-group-users.md
+  
+  - API Reference:
+    - reference/index.md
+    - Endpoints Summary: reference/endpoints-summary.md
+    - Parameters Reference: reference/parameters-reference.md
+    - Response Codes: reference/response-codes.md
+    - Status Codes: reference/status-codes.md
+  
+  - Examples:
+    - examples/index.md
+    - Authentication Examples: examples/authentication.md
+    - Task Management: examples/task-management.md
+    - ERP Integration: examples/erp-integration.md
+    - Deployment Automation: examples/deployment-automation.md
+    - Export Automation: examples/export-automation.md
+    - Security Management: examples/security-management.md
+    - PowerShell Scripts: examples/powershell-scripts.md
+    - Python Examples: examples/python-examples.md
+    - Postman Collections: examples/postman-collections.md
+  
+  - Best Practices:
+    - best-practices/index.md
+    - Error Handling: best-practices/error-handling.md
+    - Rate Limiting: best-practices/rate-limiting.md
+    - Security Considerations: best-practices/security.md
+    - Performance Optimization: best-practices/performance.md
+  
+  - Appendices:
+    - appendices/index.md
+    - Appendix A - Module Actions: appendices/module-actions.md
+    - Appendix B - Sample Scripts: appendices/sample-scripts.md
+    - Appendix C - Troubleshooting: appendices/troubleshooting.md
+    - Appendix D - Migration Guide: appendices/migration-guide.md
+
+extra:
+  copyright: |
+    © 2025 EPMware, Inc. All rights reserved. | 
+    <a href="https://www.epmware.com">www.epmware.com</a> | 
+    408-614-0442

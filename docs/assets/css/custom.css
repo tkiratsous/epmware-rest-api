@@ -1,0 +1,498 @@
+/* custom.css - EPMware REST API Guide specific styling */
+
+/* EPMware brand colors and styling (consistent with Logic Builder Guide) */
+:root {
+  --epmware-blue: #1976d2;
+  --epmware-orange: #ff9800;
+  --epmware-light-blue: #e3f2fd;
+  --epmware-dark-blue: #0d47a1;
+  --epmware-code-bg: #f5f5f5;
+  --epmware-code-border: #ddd;
+  --epmware-success: #4caf50;
+  --epmware-error: #f44336;
+  --epmware-warning: #ff9800;
+}
+
+/* Custom admonition for EPMware notes */
+.md-typeset .admonition.note {
+  border-color: var(--epmware-blue);
+}
+
+.md-typeset .admonition.note > .admonition-title {
+  background-color: var(--epmware-light-blue);
+  border-color: var(--epmware-blue);
+}
+
+/* Custom admonition for cautions */
+.md-typeset .admonition.warning {
+  border-color: var(--epmware-orange);
+}
+
+.md-typeset .admonition.warning > .admonition-title {
+  background-color: #fff3e0;
+  border-color: var(--epmware-orange);
+}
+
+/* Code block styling for REST API examples */
+.md-typeset pre {
+  background-color: var(--epmware-code-bg);
+  border: 1px solid var(--epmware-code-border);
+  border-radius: 4px;
+}
+
+.md-typeset code {
+  background-color: var(--epmware-code-bg);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  font-size: 0.85em;
+}
+
+/* HTTP method badges */
+.http-method {
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  border-radius: 3px;
+  font-size: 0.85em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 0.5em;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.http-method.get {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.http-method.post {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.http-method.put {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.http-method.patch {
+  background-color: #fce4ec;
+  color: #c2185b;
+}
+
+.http-method.delete {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+/* Status code badges */
+.status-code {
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  border-radius: 3px;
+  font-size: 0.85em;
+  font-weight: 500;
+  font-family: 'Roboto Mono', monospace;
+  margin: 0 0.2em;
+}
+
+.status-code.success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-code.error {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.status-code.warning {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.status-code.info {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+/* API endpoint styling */
+.api-endpoint {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-family: 'Roboto Mono', monospace;
+  position: relative;
+}
+
+.api-endpoint::before {
+  content: "ENDPOINT";
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: white;
+  padding: 0 5px;
+  color: var(--epmware-blue);
+  font-weight: 600;
+  font-size: 0.75em;
+  letter-spacing: 0.5px;
+}
+
+/* Request/Response sections */
+.request-section,
+.response-section {
+  border-left: 3px solid var(--epmware-blue);
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+.request-section h4,
+.response-section h4 {
+  color: var(--epmware-dark-blue);
+  margin-top: 0;
+}
+
+/* JSON syntax highlighting enhancement */
+.language-json .s2 { /* JSON strings */
+  color: #008000;
+}
+
+.language-json .mi { /* JSON numbers */
+  color: #0086b3;
+}
+
+.language-json .kc { /* JSON true/false/null */
+  color: #d73a49;
+}
+
+/* Bash/curl syntax highlighting */
+.language-bash .s { /* Strings */
+  color: #008000;
+}
+
+.language-bash .nv { /* Variables */
+  color: #d73a49;
+}
+
+/* Parameter tables */
+.param-table table {
+  margin: 1rem 0;
+}
+
+.param-table th {
+  background-color: var(--epmware-light-blue);
+  color: var(--epmware-dark-blue);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.param-table td:first-child {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9em;
+  color: var(--epmware-dark-blue);
+}
+
+.param-table td:nth-child(3) {
+  text-align: center;
+}
+
+/* Required field indicator */
+.required {
+  color: var(--epmware-error);
+  font-weight: bold;
+}
+
+/* Optional field indicator */
+.optional {
+  color: #666;
+  font-style: italic;
+}
+
+/* Module cards on homepage */
+.module-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.module-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.module-card h3 {
+  color: var(--epmware-dark-blue);
+  margin-top: 0;
+}
+
+/* API testing section */
+.try-it-out {
+  background-color: #f0f7ff;
+  border: 1px solid var(--epmware-blue);
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.try-it-out::before {
+  content: "TRY IT OUT";
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: #f0f7ff;
+  padding: 0 8px;
+  color: var(--epmware-blue);
+  font-weight: 600;
+  font-size: 0.8em;
+}
+
+/* Response example boxes */
+.response-example {
+  background-color: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem 0;
+  position: relative;
+}
+
+.response-example.success {
+  border-left: 4px solid var(--epmware-success);
+}
+
+.response-example.error {
+  border-left: 4px solid var(--epmware-error);
+}
+
+/* Tabs for code examples in different languages */
+.md-typeset .tabbed-labels {
+  border-bottom: 2px solid var(--epmware-blue);
+}
+
+.md-typeset .tabbed-labels label {
+  color: var(--epmware-dark-blue);
+  font-weight: 500;
+}
+
+.md-typeset .tabbed-labels label:hover {
+  color: var(--epmware-orange);
+}
+
+/* Authentication token display */
+.token-display {
+  background-color: #f5f5f5;
+  border: 1px dashed #999;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9em;
+  word-break: break-all;
+  margin: 1rem 0;
+}
+
+/* Security warning boxes */
+.security-warning {
+  background-color: #fff3e0;
+  border: 2px solid var(--epmware-warning);
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+
+.security-warning::before {
+  content: "⚠️ ";
+  font-size: 1.2em;
+}
+
+/* API flow diagrams */
+.api-flow {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.api-flow .step {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--epmware-light-blue);
+  border-radius: 4px;
+  margin: 0.5rem;
+  font-weight: 500;
+}
+
+.api-flow .arrow {
+  display: inline-block;
+  margin: 0 0.5rem;
+  color: var(--epmware-blue);
+  font-size: 1.5em;
+}
+
+/* Quick reference cards */
+.quick-ref {
+  background-color: #fafafa;
+  border-left: 4px solid var(--epmware-orange);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.quick-ref h4 {
+  color: var(--epmware-dark-blue);
+  margin-top: 0;
+}
+
+/* Print-friendly styles */
+@media print {
+  .md-header,
+  .md-sidebar,
+  .md-footer {
+    display: none !important;
+  }
+  
+  .md-main__inner {
+    margin: 0 !important;
+  }
+  
+  .md-content {
+    max-width: none !important;
+  }
+  
+  /* Ensure code blocks print well */
+  pre {
+    page-break-inside: avoid;
+  }
+  
+  /* Keep tables together */
+  table {
+    page-break-inside: avoid;
+  }
+  
+  /* Break pages at major headings */
+  h1 {
+    page-break-before: always;
+  }
+  
+  h1:first-child {
+    page-break-before: avoid;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .api-endpoint {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+  
+  .param-table table {
+    font-size: 0.85rem;
+  }
+  
+  .md-typeset table:not([class]) td {
+    padding: 0.5rem 0.3rem;
+  }
+  
+  .http-method,
+  .status-code {
+    font-size: 0.75em;
+    padding: 0.1em 0.4em;
+  }
+}
+
+/* Copy button styling for code blocks */
+.md-clipboard {
+  color: var(--epmware-blue);
+}
+
+.md-clipboard:hover {
+  color: var(--epmware-orange);
+}
+
+/* Enhanced search highlighting */
+.md-search-result mark {
+  background-color: var(--epmware-orange);
+  color: white;
+}
+
+/* Navigation enhancement for API modules */
+.md-nav__item--nested > .md-nav__link::after {
+  color: var(--epmware-blue);
+}
+
+/* Custom grid cards for homepage */
+.grid.cards > ul > li {
+  border: 1px solid #e0e0e0;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.grid.cards > ul > li:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+/* Rate limit indicator */
+.rate-limit {
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85em;
+  margin: 0 0.2em;
+}
+
+/* API version badge */
+.api-version {
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  background-color: var(--epmware-light-blue);
+  color: var(--epmware-dark-blue);
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 0.9em;
+  margin-left: 0.5em;
+}
+
+/* Collapsible sections for long examples */
+details.api-details {
+  border: 1px solid var(--epmware-code-border);
+  border-radius: 4px;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+details.api-details summary {
+  background-color: var(--epmware-light-blue);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--epmware-dark-blue);
+}
+
+details.api-details summary:hover {
+  background-color: #d1e7fd;
+}
+
+details.api-details pre {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+}
+
+/* Hide navigation scrollbar */
+.md-sidebar--primary .md-sidebar__scrollwrap {
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Opera */
+}
