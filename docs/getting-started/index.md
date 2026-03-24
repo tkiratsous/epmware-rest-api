@@ -21,7 +21,7 @@ Before you begin, ensure you have:
 
 Navigate to the EPMware Security Module and generate an API token for your user account.
 
-[📖 Authentication Guide →](authentication/)
+[📖 Authentication Guide →](authentication.md)
 
 ### Step 2: Understand the URL Structure
 
@@ -31,7 +31,7 @@ Learn how EPMware API URLs are constructed:
 https://<EPMWARE_URL>/service/api/<module>/<action>
 ```
 
-[📖 URL Structure Guide →](url-structure/)
+[📖 URL Structure Guide →](url-structure.md)
 
 ### Step 3: Make Your First API Call
 
@@ -54,94 +54,8 @@ Understand the standard response format:
 }
 ```
 
-[📖 Response Formats Guide →](response-formats/)
 
-### Step 5: Implement Error Handling
 
-Learn to handle errors gracefully:
-
-```json
-{
-  "status": "E",
-  "message": "Authentication required",
-  "errorCode": "AUTH_001"
-}
-```
-
-[📖 Error Handling Guide →](error-handling/)
-
-## Core Concepts
-
-### Authentication
-All API requests require token-based authentication. Tokens are passed in the `Authorization` header of each request.
-
-### Modules
-The API is organized into functional modules:
-- **Task**: Task monitoring and management
-- **ERP**: ERP integration operations
-- **Deployment**: Deployment automation
-- **Export**: Data export operations
-- **Security**: User and group management
-
-### Synchronous vs Asynchronous
-- **Synchronous**: Immediate response (e.g., get user details)
-- **Asynchronous**: Returns task ID for tracking (e.g., run import)
-
-### Rate Limiting
-The API implements rate limiting to ensure fair usage:
-- Standard limit: 100 requests per minute
-- Bulk operations: 10 requests per minute
-
-## Development Workflow
-
-```mermaid
-graph LR
-    A[Generate Token] --> B[Test Connection]
-    B --> C[Implement Core Features]
-    C --> D[Add Error Handling]
-    D --> E[Test & Deploy]
-```
-
-## Environment Setup
-
-### Development Environment
-
-```bash
-# Set environment variables
-export EPMWARE_URL="https://dev.epmwarecloud.com"
-export EPMWARE_TOKEN="your-dev-token-here"
-```
-
-### Production Environment
-
-```bash
-# Use secure token storage
-export EPMWARE_URL="https://prod.epmwarecloud.com"
-export EPMWARE_TOKEN="${SECURE_TOKEN_VAULT}"
-```
-
-## Common Integration Patterns
-
-### Pattern 1: Scheduled Data Import
-
-```python
-# Run daily at 2 AM
-schedule.every().day.at("02:00").do(run_erp_import)
-```
-
-### Pattern 2: Event-Driven Export
-
-```python
-# Trigger export when data changes
-on_data_change(trigger_export)
-```
-
-### Pattern 3: User Synchronization
-
-```python
-# Sync users from HR system
-sync_users_from_hr()
-```
 
 ## Best Practices Summary
 
@@ -151,36 +65,6 @@ sync_users_from_hr()
 4. **Logging**: Log all API interactions for debugging
 5. **Testing**: Test in development before production
 
-## Tools and Resources
-
-### Recommended Tools
-
-| Tool | Purpose | Link |
-|------|---------|------|
-| **Postman** | API testing and exploration | [Download](https://www.postman.com) |
-| **cURL** | Command-line HTTP client | Built into most systems |
-| **Python Requests** | Python HTTP library | `pip install requests` |
-| **PowerShell** | Windows automation | Built into Windows |
-
-### Sample Code Repository
-
-Find complete examples in our [GitHub repository](https://github.com/epmware/api-examples).
-
-## Next Steps
-
-Ready to dive deeper? Explore these resources:
-
-<div class="next-steps-grid">
-
-📚 **[API Modules](../modules/)** - Detailed module documentation
-
-🔧 **[API Reference](../reference/)** - Complete endpoint reference
-
-💡 **[Examples](../examples/)** - Practical implementation examples
-
-⚡ **[Best Practices](../best-practices/)** - Advanced tips and patterns
-
-</div>
 
 ## Getting Help
 

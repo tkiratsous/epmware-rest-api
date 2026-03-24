@@ -85,7 +85,6 @@ nav:
     - Authentication: getting-started/authentication.md
     - URL Structure: getting-started/url-structure.md
     - Response Formats: getting-started/response-formats.md
-    - Error Handling: getting-started/error-handling.md
   
   - API Modules:
     - modules/index.md
@@ -99,8 +98,7 @@ nav:
       - Run Import: modules/erp/run-import.md
     - Deployment Module:
       - modules/deployment/index.md
-      - Run Deployment: modules/deployment/run-deployment.md
-      - Get Execution Details: modules/deployment/get-execution-details.md
+      - Run Deployment: modules/deployment/run-deployment.md      
     - Export Module:
       - modules/export/index.md
       - Run Export: modules/export/run-export.md
@@ -108,49 +106,19 @@ nav:
       - Get Execution Details: modules/export/get-execution-details.md
     - Security Module:
       - modules/security/index.md
-      - User Management:
-        - modules/security/users/create.md
-        - modules/security/users/update.md
-        - modules/security/users/enable-disable.md
-        - modules/security/users/get-users.md
-      - Group Management:
-        - modules/security/groups/assign-groups.md
-        - modules/security/groups/unassign-groups.md
-        - modules/security/groups/get-groups.md
-        - modules/security/groups/get-group-users.md
-  
-  - API Reference:
-    - reference/index.md
-    - Endpoints Summary: reference/endpoints-summary.md
-    - Parameters Reference: reference/parameters-reference.md
-    - Response Codes: reference/response-codes.md
-    - Status Codes: reference/status-codes.md
-  
-  - Examples:
-    - examples/index.md
-    - Authentication Examples: examples/authentication.md
-    - Task Management: examples/task-management.md
-    - ERP Integration: examples/erp-integration.md
-    - Deployment Automation: examples/deployment-automation.md
-    - Export Automation: examples/export-automation.md
-    - Security Management: examples/security-management.md
-    - PowerShell Scripts: examples/powershell-scripts.md
-    - Python Examples: examples/python-examples.md
-    - Postman Collections: examples/postman-collections.md
-  
-  - Best Practices:
-    - best-practices/index.md
-    - Error Handling: best-practices/error-handling.md
-    - Rate Limiting: best-practices/rate-limiting.md
-    - Security Considerations: best-practices/security.md
-    - Performance Optimization: best-practices/performance.md
-  
-  - Appendices:
-    - appendices/index.md
-    - Appendix A - Module Actions: appendices/module-actions.md
-    - Appendix B - Sample Scripts: appendices/sample-scripts.md
-    - Appendix C - Troubleshooting: appendices/troubleshooting.md
-    - Appendix D - Migration Guide: appendices/migration-guide.md
+      - SSO User Management:
+        - modules/security/sso_apis/create.md
+        - modules/security/sso_apis/update.md
+        - modules/security/sso_apis/disable.md
+        - modules/security/sso_apis/enable.md
+        - modules/security/sso_apis/assign-groups.md
+        - modules/security/sso_apis/unassign-groups.md
+      - User and Groups Management:
+        - modules/security/user_groups/get-users.md
+        - modules/security/user_groups/get-groups.md
+        - modules/security/user_groups/get-group-users.md
+ 
+
 
 extra:
   copyright: |
