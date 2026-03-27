@@ -47,10 +47,6 @@ Ready to explore specific modules?
 🔐 **[Security Module](security/)** - Manage users and permissions
 
 </div>
-
-## Need Help?
-- ❓ See [Troubleshooting Guide](../appendices/troubleshooting/) for common issues
-
 ---
 
 [← Back to Getting Started](../getting-started/) | [API Reference →](../reference/)
