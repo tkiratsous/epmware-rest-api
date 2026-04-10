@@ -94,9 +94,7 @@ Explore the complete REST API documentation:
 ## Support & Resources
 
 - **Technical Support**: support@epmware.com
-- **Phone**: 408-614-0442
+- **Phone**: 408-614-0166
 - **Website**: [www.epmware.com](https://www.epmware.com)
-- **API Support**: [https://support.claude.com](https://support.claude.com)
-- **API Documentation**: [https://docs.claude.com](https://docs.claude.com)
 
 ---
