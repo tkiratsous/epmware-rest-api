@@ -82,7 +82,7 @@ Explore the complete REST API documentation:
 
     User and security groups managements
 
-    [:octicons-arrow-right-24: Export APIs](modules/security/)
+    [:octicons-arrow-right-24: Security APIs](modules/security/)
 
     ---
 
